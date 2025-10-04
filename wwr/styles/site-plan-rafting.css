@@ -165,3 +165,19 @@ nav a:hover {
   border-top: 1px solid;
   border-right: 1px solid;
 }
+
+/* 
+   Added this rule to resize and center the hero image.
+   The global 'img' rule above limited all images to 300px wide,
+   which made the hero banner too small.
+   This overrides that rule for the #hero-img so it can be larger and responsive.
+*/
+
+#hero-img {
+  max-width: 700px; 
+  width: 50%; /* or 50% if you want a percentage width */
+  height: auto;
+
+  display: block;
+  margin: 0 auto;
+}
