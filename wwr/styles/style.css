@@ -1,16 +1,91 @@
+/* ===============================
+   GOOGLE FONTS (must be first)
+   =============================== */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Rock+Salt&display=swap');
+
+/* ===============================
+   SIMPLE RESET
+   =============================== */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default extra space on h2 so we control it with our margins */
+h2 { margin: 0; }
+
+/* ===============================
+   LAYOUT WRAPPER
+   =============================== */
 #content {
     max-width: 1600px;  /* keeps page from stretching too wide */
     margin: 0 auto;     /* centers the page horizontally */
 }
 
-/* Center text in navigation links */
+/* ===============================
+   TYPOGRAPHY: FONTS & SIZES
+   =============================== */
+/* Body font, size, and base color */
+body {
+    background-color: #fcfbfb; /* soft off-white */
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 22px; /* per instructions */
+    color: #14200d; /* dark readable text (subtle tweak that fits your palette) */
+}
+
+/* Headline font for hero title (and you can reuse on others if desired) */
+.home-title {
+    font-family: 'Rock Salt', 'Bradley Hand', cursive, sans-serif;
+    font-size: 2em; /* 2x the body size */
+    color: #ffffff; /* white text over hero image */
+}
+
+/* Subheading inside hero */
+h4 {
+    color: #ffffff; /* white subheading text */
+    font-weight: 600;
+}
+
+/* Optional: All h2s can inherit the headline font if you like the look */
+.msg h2,
+.rivers-card h2,
+.camping-card h2,
+.rapids-card h2 {
+    font-family: 'Rock Salt', 'Bradley Hand', cursive, sans-serif;
+}
+
+/* Fine-tuned sizes per instructions */
+.book, .join {
+    font-size: 18px;
+}
+.msg p {
+    font-size: 0.8em;
+}
+
+/* ===============================
+   HEADER & NAV
+   =============================== */
+header {
+    background-color: rgba(20, 30, 13, 0.7); /* semi-transparent dark tone */
+}
+
+/* Center text in navigation links and apply padding */
 nav a {
     text-align: center;
     color: #ffffff; 
     text-decoration: none;
+    padding: 35px; /* per instructions */
 }
 
-/* Center the hero message headings */
+/* Navigation hover */
+nav a:hover {
+    background-color: #000000; /* black hover background for contrast */
+    color: #d9c2a3; /* readable tan font color */
+}
+
+/* ===============================
+   HERO
+   =============================== */
 #hero-msg h1,
 #hero-msg h4 {
     text-align: center;
@@ -21,7 +96,14 @@ nav a {
     text-align: center;
 }
 
-/* Center text inside each main section (Rivers, Camping, Rapids, etc.) */
+/* Hero image: full width for responsiveness */
+#hero-img {
+    width: 100%;
+}
+
+/* ===============================
+   MAIN CONTENT & CARDS
+   =============================== */
 main section {
     text-align: center;
 }
@@ -31,98 +113,90 @@ main section {
     background-color: #94d2bd; /* soft green-blue background section */
 }
 
-/* ===== Background Colors ===== */
-
-body {
-    background-color: #fcfbfb; /* soft off-white */
+/* Card icons (river, campfire, oars) */
+.icon {
+    width: 80px;
+    padding-top: 10px; /* per instructions */
 }
 
-header {
-    background-color: rgba(20, 30, 13, 0.7); /* semi-transparent dark tone */
+/* Logo size + padding as requested */
+.logo {
+    width: 80px;
+}
+#logo_link {
+    padding-top: 5px; /* per instructions */
 }
 
-/* Navigation hover */
-nav a:hover {
-    background-color: #000000; /* black hover background for contrast */
-    color: #d9c2a3; /* readable tan font color */
+/* Message section spacing and readability */
+.msg {
+    background-color: #0a9396; /* deep teal section */
+    color: white; /* readable text */
+    padding: 35px; /* per instructions */
+    line-height: 1.5em; /* per instructions */
+    text-align: center;
+}
+.msg h2 { color: #ffffff; }
+.msg p {
+    color: #ffffff;
+    padding-bottom: 15px; /* per instructions */
 }
 
-/* Buttons */
+/* Buttons (book/join) with spacing and rounded corners */
 .book, .join {
     background-color: #005f73; /* main accent color for buttons */
     color: #ffffff; /* white text for contrast */
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 15px 30px;       /* per instructions */
+    margin-top: 50px;         /* per instructions */
+    border-radius: 5px;       /* per instructions */
     text-decoration: none;
+    display: inline-block;    /* ensures padding & margin behave as expected */
 }
-
 .book:hover, .join:hover {
     background-color: #0a9396; /* lighter teal for hover */
     color: #ffffff; /* keeps text white */
 }
 
-/* Message section */
-.msg {
-    background-color: #0a9396; /* deep teal section */
-    color: white; /* readable text */
-    padding: 40px;
-    text-align: center;
+/* Card images with a strong border using your palette */
+.card-img {
+    border: 10px solid #d9c2a3; /* per instructions (use brand color instead of black) */
 }
 
-/* Add specific text colors inside .msg */
-.msg h2 {
-    color: #ffffff;
+/* Include border in size calculation for images inside main sections */
+main section img {
+    box-sizing: border-box; /* per instructions */
 }
 
-.msg p {
-    color: #ffffff;
+/* Suggested large vertical spacing for card sections and footer */
+.rivers-card,
+.camping-card,
+.rapids-card {
+    margin: 200px 0; /* per instructions */
 }
 
-/* Footer */
+/* ===============================
+   FOOTER
+   =============================== */
 footer {
     background-color: #005f73;
     color: #ffffff;
-    padding: 20px;
+    padding: 25px 50px; /* per instructions */
     text-align: center;
+    margin-top: 200px; /* per instructions */
 }
 
 footer a {
     color: #ffffff; /* white links in footer */
     text-decoration: none;
-    
 }
-
 footer a:hover {
     color: #d9c2a3; /* light tan hover color */
     text-decoration: underline;
 }
-
-/* Hero title text */
-.home-title {
-    color: #ffffff; /* white text over hero image */
+footer .social img {
+    padding-top: 15px; /* per instructions */
 }
 
-h4 {
-    color: #ffffff; /* white subheading text */
-}
-
-/* ===== Element Widths ===== */
-
-/* Logo size */
-.logo {
-    width: 80px;
-}
-
-/* Card icons (river, campfire, oars) */
-.icon {
-    width: 80px;
-}
-
-/* Hero image: full width for responsiveness */
-#hero-img {
-    width: 100%;
-}
-
+/* Slightly larger footer text for readability */
 footer p {
-    font-size: 1.2em; /* larger text in footer for readability */
+    font-size: 1.2em;
 }
