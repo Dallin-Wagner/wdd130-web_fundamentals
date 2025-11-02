@@ -1,202 +1,215 @@
-/* ===============================
-   GOOGLE FONTS (must be first)
-   =============================== */
+/* DEBUG — remove after test */
+body { outline: 6px solid hotpink !important; }
+
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Rock+Salt&display=swap');
 
-/* ===============================
-   SIMPLE RESET
-   =============================== */
+
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
 body {
-    margin: 0;
-    padding: 0;
+  font-family: 'Raleway', Arial, sans-serif;
+  background-color: #fcfbfb;
+  color: #14200d;
+  margin: 0;
 }
+img { max-width: 100%; display: block; }
 
-/* Remove default extra space on h2 so we control it with our margins */
-h2 { margin: 0; }
+/* Center the whole page like the mock */
+#content { max-width: 1600px; margin: 0 auto; }
 
-/* ===============================
-   LAYOUT WRAPPER
-   =============================== */
-#content {
-    max-width: 1600px;  /* keeps page from stretching too wide */
-    margin: 0 auto;     /* centers the page horizontally */
-}
-
-/* ===============================
-   TYPOGRAPHY: FONTS & SIZES
-   =============================== */
-/* Body font, size, and base color */
-body {
-    background-color: #fcfbfb; /* soft off-white */
-    font-family: 'Raleway', Arial, sans-serif;
-    font-size: 22px; /* per instructions */
-    color: #14200d; /* dark readable text (subtle tweak that fits your palette) */
-}
-
-/* Headline font for hero title (and you can reuse on others if desired) */
-.home-title {
-    font-family: 'Rock Salt', 'Bradley Hand', cursive, sans-serif;
-    font-size: 2em; /* 2x the body size */
-    color: #ffffff; /* white text over hero image */
-}
-
-/* Subheading inside hero */
-h4 {
-    color: #ffffff; /* white subheading text */
-    font-weight: 600;
-}
-
-/* Optional: All h2s can inherit the headline font if you like the look */
-.msg h2,
-.rivers-card h2,
-.camping-card h2,
-.rapids-card h2 {
-    font-family: 'Rock Salt', 'Bradley Hand', cursive, sans-serif;
-}
-
-/* Fine-tuned sizes per instructions */
-.book, .join {
-    font-size: 18px;
-}
-.msg p {
-    font-size: 0.8em;
-}
-
-/* ===============================
-   HEADER & NAV
-   =============================== */
+/* ---------- Header (Grid) + Nav (Flex) ---------- */
 header {
-    background-color: rgba(20, 30, 13, 0.7); /* semi-transparent dark tone */
+  display: grid;
+  grid-template-columns: 150px auto; /* logo + nav */
+  align-items: center;
+  background-color: rgba(20, 30, 13, 0.7); /* semi-transparent dark bar */
+  padding: 12px 0;
 }
+#logo_link { padding-top: 5px; justify-self: center; }
+.logo { width: 80px; height: auto; }
 
-/* Center text in navigation links and apply padding */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 nav a {
-    text-align: center;
-    color: #ffffff; 
-    text-decoration: none;
-    padding: 35px; /* per instructions */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 10px 12px;
 }
-
-/* Navigation hover */
 nav a:hover {
-    background-color: #000000; /* black hover background for contrast */
-    color: #d9c2a3; /* readable tan font color */
+  background: #d9c2a3;
+  color: #14200d;
+  border-radius: 4px;
 }
 
-/* ===============================
-   HERO
-   =============================== */
-#hero-msg h1,
-#hero-msg h4 {
-    text-align: center;
+/* ---------- Hero (Grid + overlap) ---------- */
+#hero {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr; /* center column ~60% */
+  margin-top: -100px; /* overlaps header like the mock */
+}
+#hero-box { grid-column: 1/4; grid-row: 1/3; z-index: -1; }
+#hero-img { width: 100%; height: auto; }
+
+#hero-msg {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin-top: 100px;  /* keep text below header */
+  text-align: center;
+}
+.home-title {
+  font-family: 'Rock Salt', cursive;
+  font-size: 2.5rem;
+  color: #ffffff;      /* must be white over photo */
+  margin: 0 0 8px 0;
+}
+#hero-msg h4 { color: #ffffff; }
+.button-box { margin-top: 10px; }
+.book {
+  background-color: #ee9b00;
+  color: #001219;
+  padding: 12px 18px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  font-weight: 700;
+}
+.book:hover { background-color: #bb7c00; }
+
+/* ---------- Main (10-col Grid) ---------- */
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  /* Use gap instead of margins on sections */
+  gap: 0;
 }
 
-/* Center the Book Now button box */
-.button-box {
-    text-align: center;
+/* Remove this from your old CSS: main section { margin: 20px; } */
+
+h2 {
+  color: #005f73;
+  font-size: 2rem;
+  margin-top: 10px;
 }
 
-/* Hero image: full width for responsiveness */
-#hero-img {
-    width: 100%;
-}
-
-/* ===============================
-   MAIN CONTENT & CARDS
-   =============================== */
-main section {
-    text-align: center;
-}
-
-#background {
-    height: 725px;
-    background-color: #94d2bd; /* soft green-blue background section */
-}
-
-/* Card icons (river, campfire, oars) */
-.icon {
-    width: 80px;
-    padding-top: 10px; /* per instructions */
-}
-
-/* Logo size + padding as requested */
-.logo {
-    width: 80px;
-}
-#logo_link {
-    padding-top: 5px; /* per instructions */
-}
-
-/* Message section spacing and readability */
-.msg {
-    background-color: #0a9396; /* deep teal section */
-    color: white; /* readable text */
-    padding: 35px; /* per instructions */
-    line-height: 1.5em; /* per instructions */
-    text-align: center;
-}
-.msg h2 { color: #ffffff; }
-.msg p {
-    color: #ffffff;
-    padding-bottom: 15px; /* per instructions */
-}
-
-/* Buttons (book/join) with spacing and rounded corners */
-.book, .join {
-    background-color: #005f73; /* main accent color for buttons */
-    color: #ffffff; /* white text for contrast */
-    padding: 15px 30px;       /* per instructions */
-    margin-top: 50px;         /* per instructions */
-    border-radius: 5px;       /* per instructions */
-    text-decoration: none;
-    display: inline-block;    /* ensures padding & margin behave as expected */
-}
-.book:hover, .join:hover {
-    background-color: #0a9396; /* lighter teal for hover */
-    color: #ffffff; /* keeps text white */
-}
-
-/* Card images with a strong border using your palette */
+/* Card images + hover */
 .card-img {
-    border: 10px solid #d9c2a3; /* per instructions (use brand color instead of black) */
+  width: 100%;
+  border: 10px solid #d9c2a3;
+  transition: transform .5s;
+  box-shadow: 5px 5px 10px #6f7364;
+}
+.card-img:hover { opacity: .6; transform: scale(1.1); }
+
+/* Cards row placements */
+.rivers-card  { grid-column: 2 / 4; grid-row: 2 / 3; text-align: center; }
+.camping-card { grid-column: 5 / 7; grid-row: 2 / 3; text-align: center; }
+.rapids-card  { grid-column: 8 /10; grid-row: 2 / 3; text-align: center; }
+
+/* --- Card image sizing + centering --- */
+.card-img {
+  width: 260px;            /* pick 240–300px if you prefer */
+  height: 260px;           /* square */
+  object-fit: cover;       /* crop nicely inside the frame */
+  margin: 0 auto;          /* center the image in the card */
 }
 
-/* Include border in size calculation for images inside main sections */
-main section img {
-    box-sizing: border-box; /* per instructions */
+/* Center the little icon under each image */
+.icon {
+  width: 52px;             /* icon size */
+  height: auto;
+  display: block;
+  margin: 12px auto 6px;   /* centers it under the photo */
+  opacity: .85;            /* optional */
 }
 
-/* Suggested large vertical spacing for card sections and footer */
-.rivers-card,
-.camping-card,
-.rapids-card {
-    margin: 200px 0; /* per instructions */
-}
+/* Keep titles centered */
+.rivers-card, .camping-card, .rapids-card { text-align: center; }
 
-/* ===============================
-   FOOTER
-   =============================== */
+/* Background panel + mountains + message */
+#background { grid-column: 1 / 11; grid-row: 4 / 9; background: #d9c2a3; height: 725px; }
+.mountains  { grid-column: 2 / 7;  grid-row: 5 / 8; box-shadow: 5px 5px 10px #6f7364; }
+
+.msg {
+  grid-column: 6 / 10;
+  grid-row: 6 / 7;
+  background-color: #6f7364;
+  color: #ffffff;
+  padding: 35px;
+  box-shadow: 5px 5px 10px #6f7364;
+  border-radius: 8px;
+}
+.join {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #0a9396;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+.join:hover { filter: brightness(0.9); }
+
+/* ---------- Footer (Flex) ---------- */
 footer {
-    background-color: #005f73;
-    color: #ffffff;
-    padding: 25px 50px; /* per instructions */
-    text-align: center;
-    margin-top: 200px; /* per instructions */
+  background-color: #6f7364; /* matches the mock */
+  color: white;
+  padding: 25px 50px;
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left; /* optional */
 }
+footer p, footer a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 6px 0;
+  font-weight: 600;
+}
+footer a:hover { color: #d9c2a3; }
+.social img { width: 30px; }
 
-footer a {
-    color: #ffffff; /* white links in footer */
-    text-decoration: none;
+/* --- Social icons row --- */
+.social {
+  display: flex;
+  gap: 12px;
+  align-items: center;
 }
-footer a:hover {
-    color: #d9c2a3; /* light tan hover color */
-    text-decoration: underline;
-}
-footer .social img {
-    padding-top: 15px; /* per instructions */
-}
+.social a { line-height: 0; }            /* removes tiny baseline gaps */
+.social img { width: 30px; height: auto; }/* your existing size is fine */
 
-/* Slightly larger footer text for readability */
-footer p {
-    font-size: 1.2em;
+
+/* ---------- Responsive (<=900px) ---------- */
+@media screen and (max-width: 900px) {
+  #hero, .home-grid {
+    display: block;
+    height: auto;
+  }
+  nav, footer { flex-direction: column; }
+  nav a { display: block; padding: 15px; }
+
+  #hero { margin-top: 0; }
+  #hero-msg { margin-top: 0; }
+  #hero-msg h4 { display: none; }
+  #hero-msg h1 { color: #6f7364; }
+  .home-title { font-size: 25px; }
+
+  .rivers-card, .camping-card, .rapids-card {
+    margin: 50px auto;
+    width: 60%;
+  }
+  #background { display: none; }
+  .mountains, .msg {
+    width: 80%;
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+  footer { margin-top: 25px; }
 }
