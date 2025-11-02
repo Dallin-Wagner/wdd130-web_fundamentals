@@ -1,7 +1,3 @@
-/* DEBUG — remove after test */
-body { outline: 6px solid hotpink !important; }
-
-
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Rock+Salt&display=swap');
 
 
@@ -15,7 +11,7 @@ body {
 }
 img { max-width: 100%; display: block; }
 
-/* Center the whole page like the mock */
+
 #content { max-width: 1600px; margin: 0 auto; }
 
 /* ---------- Header (Grid) + Nav (Flex) ---------- */
@@ -23,7 +19,7 @@ header {
   display: grid;
   grid-template-columns: 150px auto; /* logo + nav */
   align-items: center;
-  background-color: rgba(20, 30, 13, 0.7); /* semi-transparent dark bar */
+  background-color: rgba(20, 30, 13, 0.7); 
   padding: 12px 0;
 }
 #logo_link { padding-top: 5px; justify-self: center; }
@@ -85,11 +81,10 @@ nav a:hover {
 .home-grid {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  /* Use gap instead of margins on sections */
   gap: 0;
 }
 
-/* Remove this from your old CSS: main section { margin: 20px; } */
+
 
 h2 {
   color: #005f73;
@@ -113,10 +108,10 @@ h2 {
 
 /* --- Card image sizing + centering --- */
 .card-img {
-  width: 260px;            /* pick 240–300px if you prefer */
-  height: 260px;           /* square */
-  object-fit: cover;       /* crop nicely inside the frame */
-  margin: 0 auto;          /* center the image in the card */
+  width: 260px;            
+  height: 260px;          
+  object-fit: cover;      
+  margin: 0 auto;         
 }
 
 /* Center the little icon under each image */
@@ -124,8 +119,8 @@ h2 {
   width: 52px;             /* icon size */
   height: auto;
   display: block;
-  margin: 12px auto 6px;   /* centers it under the photo */
-  opacity: .85;            /* optional */
+  margin: 12px auto 6px;   
+  opacity: .85;            
 }
 
 /* Keep titles centered */
@@ -158,14 +153,14 @@ h2 {
 
 /* ---------- Footer (Flex) ---------- */
 footer {
-  background-color: #6f7364; /* matches the mock */
+  background-color: #6f7364;
   color: white;
   padding: 25px 50px;
   margin-top: 200px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  text-align: left; /* optional */
+  text-align: left; 
 }
 footer p, footer a {
   color: #ffffff;
@@ -182,8 +177,8 @@ footer a:hover { color: #d9c2a3; }
   gap: 12px;
   align-items: center;
 }
-.social a { line-height: 0; }            /* removes tiny baseline gaps */
-.social img { width: 30px; height: auto; }/* your existing size is fine */
+.social a { line-height: 0; }            
+.social img { width: 30px; height: auto; }
 
 
 /* ---------- Responsive (<=900px) ---------- */
