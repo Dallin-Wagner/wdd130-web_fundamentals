@@ -211,9 +211,7 @@ footer a:hover { color: #d9c2a3; }
 
 
 
-/*
-This is CSS for the second page: 
-*/
+/* This is CSS for the second page:  */
 
 /* ---------- Rafting Trips Page ---------- */
 
@@ -290,9 +288,9 @@ nav a.active {
   border-radius: 6px;
 }
 
-/* Morning sunrise–style info strip */
+
 .trip-info-banner {
-  background-image: url("images/rivers.jpg"); /* you can swap this for a sunrise image later */
+  background-image: url("images/rivers.jpg");
   background-size: cover;
   background-position: center;
   padding: 60px 0;
@@ -360,7 +358,7 @@ nav a.active {
     display: block;
     width: 100%;
     height: 350px;
-    object-fit: cover;       /* fills the box nicely */
+    object-fit: cover;  
 }
 
 @media screen and (max-width: 900px) {
