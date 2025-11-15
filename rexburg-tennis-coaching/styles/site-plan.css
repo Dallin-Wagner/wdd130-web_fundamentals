@@ -174,3 +174,14 @@ nav a:hover {
   border-top: 1px solid;
   border-right: 1px solid;
 }
+
+
+/* Wireframe image sizing */
+main img[src*="wireframe"] {
+    max-width: 500px;   /* adjust size here */
+    width: 100%;        /* keeps it responsive */
+    display: block;
+    margin: 20px auto;  /* centers each image */
+    border: 2px solid #ccc;
+    border-radius: 6px;
+}
