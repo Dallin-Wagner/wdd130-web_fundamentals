@@ -374,3 +374,36 @@ nav a.active {
 }
 
 
+/* Feedback message bar at top */
+#feedback {
+    background-color: antiquewhite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: .5em;
+    /* make this element invisible until we are ready for it */
+    display: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Move page down so the feedback bar isn't covering stuff */
+.moveDown {
+    margin-top: 3em;
+}
+
+/* Center the entire contact page content */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;        /* centers the container */
+    text-align: center;    /* centers heading + intro */
+    padding: 2rem;
+}
+
+/* Center the form box itself */
+.contact-form {
+    display: inline-block; /* lets it size itself */
+    text-align: left;      /* keeps labels aligned left */
+    margin: 0 auto;        /* centers the form */
+}
