@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>Rexburg Tennis Coaching | Lessons & Scheduling</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lesson options, clinics, junior programs, and scheduling for Rexburg Tennis Coaching.">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo-area">
+      <img src="images/rtc-logo.png" alt="Rexburg Tennis Coaching logo">
+      <h1>Rexburg Tennis Coaching</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="scheduling.html">Lessons & Scheduling</a>
+      <a href="restringing-service.html">Restringing Service</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Top: Testimonials + image (matches wireframe top area) -->
+    <section class="hero small-hero" id="testimonials">
+      <div class="hero-text">
+        <h2>Testimonials &amp; Scheduling</h2>
+
+        <figure>
+          <blockquote>
+            “Coach DWag helped me completely rebuild my serve. I feel more confident
+            in my matches and actually look forward to serving now.”
+          </blockquote>
+          <figcaption>– High school player</figcaption>
+        </figure>
+
+        <figure>
+          <blockquote>
+            “The drills are fun but still intense. I noticed a difference in my
+            consistency after just a few weeks.”
+          </blockquote>
+          <figcaption>– Adult recreational player</figcaption>
+        </figure>
+
+        <figure>
+          <blockquote>
+            “My kid used to be nervous to play in front of others. Now they can’t
+            wait to get to practice. The positive coaching has made a huge impact.”
+          </blockquote>
+          <figcaption>– Parent of junior player</figcaption>
+        </figure>
+      </div>
+
+      <div class="hero-image">
+        <img src="images/rafa-on-clay.jpg" alt="Professional player hitting a forehand on clay court">
+      </div>
+    </section>
+
+    <!-- Lessons and Clinics: three columns (matches middle bar of wireframe) -->
+    <section class="content-section" id="lessons-clinics">
+      <h2>Lessons &amp; Clinics</h2>
+      <p>
+        We offer private lessons, small group sessions, and focused clinics on
+        serving, net play, and match strategy. Each option is designed to help you
+        improve in a structured but fun environment.
+      </p>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3>Private Lessons</h3>
+          <ul>
+            <li>1-on-1 instruction</li>
+            <li>Ideal for focused technical work</li>
+            <li>Great for all levels</li>
+          </ul>
+          <p><strong>Typical rate:</strong> $30–$40 per hour (contact for current pricing)</p>
+        </article>
+
+        <article class="card">
+          <h3>Small Group Sessions</h3>
+          <ul>
+            <li>2–4 players per court</li>
+            <li>Live-ball drills and point play</li>
+            <li>Work on consistency and movement</li>
+          </ul>
+          <p><strong>Typical rate:</strong> $15–$20 per player per hour</p>
+        </article>
+
+        <article class="card">
+          <h3>Specialty Clinics</h3>
+          <ul>
+            <li>Serve &amp; return</li>
+            <li>Net play and volleys</li>
+            <li>Match strategy and mental toughness</li>
+          </ul>
+          <p><strong>Schedule:</strong> Offered seasonally. See sign-up form for current dates.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sign up for lessons: info + centered form (matches "Sign up / Book now") -->
+    <section class="content-section highlight" id="scheduling">
+      <h2>Sign Up for Lessons</h2>
+      <p>
+        To schedule lessons or ask about current availability, please fill out the
+        form below. Coach Dallin will contact you to confirm times and answer any
+        questions.
+      </p>
+
+      <div class="info-box">
+        <h3>Before You Schedule</h3>
+        <ul>
+          <li>Typical response time: within 24 hours.</li>
+          <li>Lessons held in the Rexburg, Idaho area.</li>
+          <li>Please include any goals or special needs in the message box.</li>
+        </ul>
+      </div>
+
+      <div id="form-message" class="form-message hidden">
+        Thank you! Your request has been received. Coach Dallin will contact you soon.
+      </div>
+
+      <div class="form-wrapper">
+        <form class="simple-form" action="#" method="post">
+          <label for="name">Player or Parent Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone">
+
+          <label for="level">Player Level:</label>
+          <select id="level" name="level">
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+            <option value="not-sure">Not sure yet</option>
+          </select>
+
+          <label for="interest">What are you interested in?</label>
+          <select id="interest" name="interest">
+            <option value="private">Private Lessons</option>
+            <option value="group">Small Group Sessions</option>
+            <option value="clinics">Specialty Clinics</option>
+            <option value="junior">Junior Programs</option>
+            <option value="other">Other / Questions</option>
+          </select>
+
+          <label for="message">Additional Details or Questions:</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <button type="submit" class="btn">Submit Request</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Bottom wide image (matches "young team pic" at bottom of wireframe) -->
+    <section class="content-section" id="junior-programs">
+      <h2>Junior Players &amp; Team Culture</h2>
+      <p>
+        Junior players are a big part of Rexburg Tennis Coaching. Many start as
+        beginners and grow into confident competitors and great teammates.
+      </p>
+      <div class="image-row">
+        <img src="images/younger-team-pic.jpg" alt="Younger team of tennis players on the court">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Rexburg Tennis Coaching | Coach Dallin “DWag” Wagner</p>
+    <p>Rexburg, Idaho | Email: <a href="mailto:coachdallin@example.com">coachdallin@example.com</a></p>
+    <p><a href="site-plan.html">View Site Plan</a></p>
+  </footer>
+
+  <script>
+    // footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // simple "thank you" behavior on submit (no backend needed)
+    const form = document.querySelector('.simple-form');
+    const messageBox = document.getElementById('form-message');
+
+    if (form && messageBox) {
+      form.addEventListener('submit', function (event) {
+        event.preventDefault(); // stop real submit
+        messageBox.classList.remove('hidden');
+        messageBox.textContent = 'Thank you! Your request has been received. Coach Dallin will contact you soon.';
+        form.reset();
+      });
+    }
+  </script>
+</body>
+</html>

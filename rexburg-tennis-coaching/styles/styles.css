@@ -1,0 +1,470 @@
+/* =========================
+   Base / Global Styles
+   ========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@500;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-main: #ffffff;
+  --bg-soft: #f5f5f7;
+  --border-soft: #e1e1e6;
+  --text-main: #222222;
+  --text-muted: #555555;
+  --primary: #1f7a34;       /* tennis green */
+  --primary-light: #e0f3e6; /* soft green background */
+  --accent: #f4f54a;        /* tennis ball yellow */
+  --link: #1454a3;
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --radius: 12px;
+  --max-width: 1100px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Barlow", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* =========================
+   Layout Helpers
+   ========================= */
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.content-section {
+  margin: 2.5rem 0;
+}
+
+.content-section h2 {
+  font-family: "Barlow Condensed", system-ui, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.highlight {
+  background-color: var(--bg-soft);
+  padding: 1.75rem 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-soft);
+}
+
+/* =========================
+   Header & Navigation
+   ========================= */
+
+header {
+  border-bottom: 1px solid var(--border-soft);
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header .logo-area {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.75rem 1rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+header .logo-area img {
+  height: 48px;
+  width: auto;
+}
+
+header .logo-area h1 {
+  font-family: "Barlow Condensed", system-ui, sans-serif;
+  font-size: 1.75rem;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+/* Nav bar */
+
+nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.25rem 1rem 0.75rem;
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.95rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* =========================
+   Hero Section
+   ========================= */
+
+.hero {
+  margin: 2rem 0 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.small-hero {
+  margin-top: 1.5rem;
+}
+
+.hero-text h2 {
+  font-family: "Barlow Condensed", system-ui, sans-serif;
+  font-size: 2.2rem;
+  margin: 0 0 0.5rem;
+}
+
+.hero-text p {
+  margin: 0 0 1rem;
+  color: var(--text-muted);
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  display: block;
+}
+
+/* =========================
+   Buttons & Links
+   ========================= */
+
+a {
+  color: var(--link);
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, var(--primary), #145a25);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(25, 94, 42, 0.35);
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(25, 94, 42, 0.4);
+}
+
+/* =========================
+   Text & Images
+   ========================= */
+
+p {
+  margin: 0 0 0.75rem;
+  color: var(--text-main);
+}
+
+.image-row {
+  margin-top: 1rem;
+}
+
+.image-row img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+/* =========================
+   Cards & Grids
+   ========================= */
+
+.card-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-soft);
+  padding: 1.25rem 1.1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.card h3 {
+  font-family: "Barlow Condensed", system-ui, sans-serif;
+  font-size: 1.35rem;
+  margin-top: 0;
+}
+
+.card ul {
+  padding-left: 1.2rem;
+  margin: 0 0 0.75rem;
+}
+
+.card .attribution {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+/* =========================
+   Forms
+   ========================= */
+
+.simple-form {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.simple-form label {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.simple-form input,
+.simple-form select,
+.simple-form textarea {
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 0.45rem 0.55rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-soft);
+  background-color: #ffffff;
+}
+
+.simple-form input:focus,
+.simple-form select:focus,
+.simple-form textarea:focus {
+  outline: 2px solid var(--primary-light);
+  border-color: var(--primary);
+}
+
+/* =========================
+   Tables (Pricing)
+   ========================= */
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.pricing-table thead {
+  background-color: var(--primary-light);
+}
+
+.pricing-table th,
+.pricing-table td {
+  padding: 0.6rem 0.5rem;
+  border: 1px solid var(--border-soft);
+  text-align: left;
+}
+
+.pricing-table th {
+  font-weight: 600;
+}
+
+/* =========================
+   Footer
+   ========================= */
+
+footer {
+  border-top: 1px solid var(--border-soft);
+  background-color: #ffffff;
+  margin-top: 2rem;
+  padding: 1rem 1rem 1.25rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+footer a {
+  color: var(--link);
+}
+
+/* =========================
+   Tennis Accent Details
+   (Subtle but sporty)
+   ========================= */
+
+.hero {
+  border-radius: var(--radius);
+  padding: 1.5rem 1.25rem;
+  background: radial-gradient(circle at top left, rgba(244, 245, 74, 0.18), transparent 55%),
+              radial-gradient(circle at bottom right, rgba(31, 122, 52, 0.12), transparent 55%);
+}
+
+/* Add a thin green left border to highlight sections you want to stand out */
+.highlight {
+  border-left: 4px solid var(--primary);
+}
+
+/* Small circular bullet accent */
+ul li::marker {
+  color: var(--primary);
+}
+
+/* =========================
+   Responsive Layout
+   ========================= */
+
+@media (min-width: 700px) {
+  .hero {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  }
+
+  .small-hero {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  }
+
+  main {
+    padding: 2rem 1.25rem 3.5rem;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .image-row img {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 900px) {
+  nav {
+    justify-content: flex-end;
+  }
+
+  header .logo-area {
+    padding-bottom: 0.25rem;
+  }
+}
+
+
+/* ===============================
+   Centered Scheduling Form Box
+   =============================== */
+
+.form-wrapper {
+  max-width: 600px;               /* keeps it nicely centered and narrow */
+  margin: 1.5rem auto 0;          /* centers box and adds top spacing */
+}
+
+.form-wrapper .simple-form {
+  background-color: #ffffff;      /* clean white card */
+  border-radius: var(--radius);   /* matches your site’s rounded corners */
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-soft); /* soft shadow */
+  padding: 1.75rem 1.5rem;        /* comfortable padding */
+}
+
+
+.simple-form button {
+  margin-top: 0.5rem;
+}
+
+
+.form-message {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--primary);
+  background-color: var(--primary-light);
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+/* =========================
+   Testimonials (figure / quote)
+   ========================= */
+
+figure {
+  margin: 0 0 0.75rem;
+}
+
+blockquote {
+  margin: 0;
+  font-style: italic;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* =========================
+   Info box above scheduling form
+   ========================= */
+
+.info-box {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--primary);
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid var(--border-soft);
+}
+
+.info-box h3 {
+  margin-top: 0;
+  font-family: "Barlow Condensed", system-ui, sans-serif;
+}
+
+/* =========================
+   2-column card grids on wide screens
+   (for restringing lower section, pricing section)
+   ========================= */
+
+@media (min-width: 700px) {
+  #pricing .card-grid,
+  #strings-and-dropoff .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
