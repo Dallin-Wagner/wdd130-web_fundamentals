@@ -24,31 +24,32 @@
     <!-- Top: Testimonials + image (matches wireframe top area) -->
     <section class="hero small-hero" id="testimonials">
       <div class="hero-text">
-        <h2>Testimonials &amp; Scheduling</h2>
+        <h2>Testimonials & Scheduling</h2>
 
-        <figure>
-          <blockquote>
-            “Coach DWag helped me completely rebuild my serve. I feel more confident
-            in my matches and actually look forward to serving now.”
-          </blockquote>
-          <figcaption>– High school player</figcaption>
-        </figure>
+<button class="accordion">High School Player</button>
+<div class="panel">
+  <p>
+    “Coach DWag helped me completely rebuild my serve. I feel more confident
+    in my matches and actually look forward to serving now.”
+  </p>
+</div>
 
-        <figure>
-          <blockquote>
-            “The drills are fun but still intense. I noticed a difference in my
-            consistency after just a few weeks.”
-          </blockquote>
-          <figcaption>– Adult recreational player</figcaption>
-        </figure>
+<button class="accordion">Adult Recreational Player</button>
+<div class="panel">
+  <p>
+    “The drills are fun but still intense. I noticed a difference in my
+    consistency after just a few weeks.”
+  </p>
+</div>
 
-        <figure>
-          <blockquote>
-            “My kid used to be nervous to play in front of others. Now they can’t
-            wait to get to practice. The positive coaching has made a huge impact.”
-          </blockquote>
-          <figcaption>– Parent of junior player</figcaption>
-        </figure>
+<button class="accordion">Parent of Junior Player</button>
+<div class="panel">
+  <p>
+    “My kid used to be nervous to play in front of others. Now they can’t
+    wait to get to practice. The positive coaching has made a huge impact.”
+  </p>
+</div>
+
       </div>
 
       <div class="hero-image">
@@ -192,5 +193,20 @@
       });
     }
   </script>
+
+
+<script>
+  const acc = document.querySelectorAll(".accordion");
+
+  acc.forEach(btn => {
+    btn.addEventListener("click", function () {
+      this.classList.toggle("active");
+
+      const panel = this.nextElementSibling;
+      panel.style.display = panel.style.display === "block" ? "none" : "block";
+    });
+  });
+</script>
+
 </body>
 </html>

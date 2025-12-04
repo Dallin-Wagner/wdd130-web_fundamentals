@@ -468,3 +468,44 @@ figcaption {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+
+/* =========================
+   Accordion Styling
+   ========================= */
+
+.accordion {
+  background-color: var(--bg-soft);
+  color: var(--text-main);
+  cursor: pointer;
+  padding: 14px 18px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--border-soft);
+  outline: none;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  border-radius: 8px;
+  margin-top: 0.6rem;
+}
+
+.accordion:hover,
+.accordion.active {
+  background-color: var(--primary-light);
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: #fff;
+  display: none;
+  overflow: hidden;
+  border-left: 3px solid var(--primary);
+  border-right: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+  border-radius: 0 0 8px 8px;
+  box-shadow: var(--shadow-soft);
+}
+
+.panel p {
+  margin: 0.75rem 0;
+}
