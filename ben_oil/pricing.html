@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing | Rexburg Mobile Auto Care</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">RMA</div>
+      <div class="logo-text">
+        <span class="logo-title">Rexburg Mobile Auto Care</span>
+        <span class="logo-subtitle">Oil • Dents • Headlights • We Come to You</span>
+      </div>
+    </a>
+
+    <button class="hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#how-it-works">How It Works</a>
+      <a href="pricing.html" class="nav-cta">Pricing</a>
+      <a href="test.html">Testimonials</a>
+      <a href="index.html#contact">Book Now</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <section class="section">
+      <header class="section-header">
+        <h2>Pricing</h2>
+        <p>
+          Clear, honest prices for mobile oil changes, dent repair, and headlight restoration in Rexburg.
+        </p>
+      </header>
+    </section>
+
+    <!-- PRICING TABLES -->
+    <section class="section pricing">
+      <div class="pricing-grid">
+        <article class="pricing-card">
+          <h3>Mobile Oil Change</h3>
+          <p class="pricing-main">$49–$79</p>
+          <ul>
+            <li>Conventional oil: from $49</li>
+            <li>Full synthetic: from $69</li>
+            <li>Includes new oil filter</li>
+            <li>Top-off of washer fluid (if needed)</li>
+            <li>Basic tire & fluid check</li>
+          </ul>
+          <p class="form-note">Price depends on engine size and oil type.</p>
+        </article>
+
+        <article class="pricing-card">
+          <h3>Cheap Dent Repair</h3>
+          <p class="pricing-main">$40+/panel</p>
+          <ul>
+            <li>Small parking-lot dings</li>
+            <li>Paintless dent repair when possible</li>
+            <li>Discounts for multiple dents</li>
+            <li>Free estimate from texted photos</li>
+          </ul>
+          <p class="form-note">Heavier damage or creases may cost more.</p>
+        </article>
+
+        <article class="pricing-card">
+          <h3>Headlight Restoration</h3>
+          <p class="pricing-main">$35–$55</p>
+          <ul>
+            <li>Both headlights included</li>
+            <li>Multi-step sanding & polishing</li>
+            <li>UV sealant to protect the finish</li>
+            <li>Bundle pricing with oil change available</li>
+          </ul>
+          <p class="form-note">Final price depends on severity of oxidation.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- BUNDLE / NOTE -->
+    <section class="section">
+      <header class="section-header">
+        <h2>Bundle & Save</h2>
+        <p>Combine services to save time and money.</p>
+      </header>
+
+      <div class="pricing-grid">
+        <article class="pricing-card">
+          <h3>Oil + Headlight Bundle</h3>
+          <p class="pricing-main">Save $10–$15</p>
+          <ul>
+            <li>Mobile oil change</li>
+            <li>Full headlight restoration</li>
+            <li>Ideal for older cars</li>
+          </ul>
+          <p class="form-note">Exact discount depends on your vehicle and oil type.</p>
+        </article>
+
+        <article class="pricing-card">
+          <h3>Dent Multi-Panel Discount</h3>
+          <p class="pricing-main">Custom Quote</p>
+          <ul>
+            <li>Multiple small dents on one or more panels</li>
+            <li>Better per-panel rate</li>
+            <li>Great for hail or parking mishaps</li>
+          </ul>
+          <p class="form-note">Text us photos for a fast estimate.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- QUICK QUOTE CTA -->
+    <section class="section">
+      <header class="section-header">
+        <h2>Need a Custom Quote?</h2>
+        <p>Text us your car year, make, model, and a photo (for dents or headlights) for a quick estimate.</p>
+      </header>
+
+      <div class="contact-layout">
+        <div class="contact-info">
+          <h3>Quick Quote Info</h3>
+          <p><strong>Call / Text:</strong> (208) 555-0134</p>
+          <p><strong>Email:</strong> rexburgmobileauto@example.com</p>
+        </div>
+
+        <form class="contact-form">
+          <div class="form-row">
+            <label for="p-name">Name</label>
+            <input id="p-name" type="text" placeholder="First & Last Name" required />
+          </div>
+
+          <div class="form-row">
+            <label for="p-phone">Phone</label>
+            <input id="p-phone" type="tel" placeholder="(208) 555-0134" required />
+          </div>
+
+          <div class="form-row">
+            <label for="p-service">Service</label>
+            <select id="p-service">
+              <option>Oil Change</option>
+              <option>Dent Repair</option>
+              <option>Headlight Restoration</option>
+              <option>Multiple Services</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="p-details">Details</label>
+            <textarea
+              id="p-details"
+              rows="4"
+              placeholder="Car year/make/model and what you need done"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn primary full-width">
+            Request Quote (Demo)
+          </button>
+          <p class="form-note">Form is for demo only—connect to email or backend to make it live.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Rexburg Mobile Auto Care • Rexburg, Idaho</p>
+    <a href="index.html" class="back-to-top">Back to Home ↑</a>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector(".nav");
+
+    if (hamburger && nav) {
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("is-open");
+        nav.classList.toggle("is-open");
+      });
+    }
+  </script>
+</body>
+</html>

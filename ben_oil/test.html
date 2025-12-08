@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonials & Photos | Rexburg Mobile Auto Care</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">RMA</div>
+      <div class="logo-text">
+        <span class="logo-title">Rexburg Mobile Auto Care</span>
+        <span class="logo-subtitle">Oil • Dents • Headlights • We Come to You</span>
+      </div>
+    </a>
+
+    <button class="hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#how-it-works">How It Works</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="test.html" class="nav-cta">Testimonials</a>
+      <a href="index.html#contact">Book Now</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <section class="section">
+      <header class="section-header">
+        <h2>Customer Testimonials & Before/After Photos</h2>
+        <p>
+          Real results from Rexburg drivers who used our mobile oil change, dent repair,
+          and headlight restoration.
+        </p>
+      </header>
+    </section>
+
+    <!-- TESTIMONIALS GRID -->
+    <section class="section testimonials">
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <p class="quote">
+            “They came to my apartment, did an oil change while I studied, and were done
+            before I finished my homework.”
+          </p>
+          <p class="name">— A. Peterson</p>
+        </article>
+
+        <article class="testimonial-card">
+          <p class="quote">
+            “Fixed two dents on my Civic for way less than the body shop. Super chill and
+            honest about the price.”
+          </p>
+          <p class="name">— J. Miller</p>
+        </article>
+
+        <article class="testimonial-card">
+          <p class="quote">
+            “Headlights went from cloudy and yellow to crystal clear. Night driving feels
+            way safer now.”
+          </p>
+          <p class="name">— K. Ramirez</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PHOTO GALLERY (Accordion) -->
+    <section class="section">
+      <header class="section-header">
+        <h2>Before & After Gallery</h2>
+        <p>Tap an image to expand it.</p>
+      </header>
+
+      <div class="accordion-gallery">
+
+        <!-- Accordion Item -->
+        <div class="accordion-item">
+          <button class="accordion-toggle">Headlight – Before</button>
+          <div class="accordion-content">
+            <img src="images/headlight-before.jpg" alt="Foggy headlight before restoration" />
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-toggle">Dent Repair – Before</button>
+          <div class="accordion-content">
+            <img src="images/dent-before.jpeg" alt="Car panel with dent" />
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-toggle">Mobile Oil Change at Home</button>
+          <div class="accordion-content">
+            <img src="images/oil-change-driveway.jpeg" alt="Mobile oil change in driveway" />
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA BACK TO CONTACT -->
+    <section class="section">
+      <header class="section-header">
+        <h2>Ready for Your Own Before & After?</h2>
+        <p>Book a mobile service and we’ll come to you.</p>
+      </header>
+      <div class="center-cta">
+        <a href="index.html#contact" class="btn primary">Book Your Service</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Rexburg Mobile Auto Care • Rexburg, Idaho</p>
+    <a href="index.html" class="back-to-top">Back to Home ↑</a>
+  </footer>
+
+  <!-- COMBINED JS (Hamburger + Accordion) -->
+  <script>
+    // Footer year update
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Hamburger menu
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector(".nav");
+
+    if (hamburger && nav) {
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("is-open");
+        nav.classList.toggle("is-open");
+      });
+    }
+
+    // Accordion image viewer
+    document.querySelectorAll(".accordion-toggle").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+
+        // Close others
+        document.querySelectorAll(".accordion-content").forEach((panel) => {
+          if (panel !== content) {
+            panel.style.maxHeight = null;
+            panel.classList.remove("open");
+          }
+        });
+
+        // Toggle current one
+        if (content.classList.contains("open")) {
+          content.style.maxHeight = null;
+          content.classList.remove("open");
+        } else {
+          content.classList.add("open");
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
